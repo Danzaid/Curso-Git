@@ -117,11 +117,15 @@ public class Ingreso extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 protected Connection conexione;
+
+        
+        
     private final String DB_URL = "jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.40.108)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=CVDBSBPD)))";  //QA
     private String USER;
     private String PWD;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      USER = jTextField1.getText();
+      JOptionPane.showMessageDialog(this,"Cambio activado");
+        USER = jTextField1.getText();
       PWD = jPasswordField1.getText();
        try {
            conexione=DriverManager.getConnection(DB_URL, USER, PWD);
